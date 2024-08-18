@@ -20,12 +20,11 @@
                 let allbutton=document.querySelectorAll("button")
                 console.log(allbutton)
                 allbutton.forEach(btn => { //for loop beacuse each button's addeventListener is different and bound to that particualr button itself
-                    btn.addEventListener('click', function(e) {
-                    //const buttonID=this.id
-                    const buttonID=e.target.id
+                    btn.addEventListener('click', function() {
+                    const buttonID=this.id
+                    //const buttonID=e.target.id
                      switch(buttonID){
                         case "button_grey":
-                            console.log("grey")
                             document.body.style.backgroundColor='grey'
                             break;
                         case "button_white":
