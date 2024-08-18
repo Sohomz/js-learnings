@@ -22,7 +22,7 @@
                 allbutton.forEach(btn => { //for loop beacuse each button's addeventListener is different and bound to that particualr button itself
                     btn.addEventListener('click', function() {
                     const buttonID=this.id
-                    //const buttonID=e.target.id
+                    console.log(buttonID)
                      switch(buttonID){
                         case "button_grey":
                             document.body.style.backgroundColor='grey'
@@ -37,7 +37,8 @@
                             document.body.style.backgroundColor='yellow'
                             break;
                         default:
-                            break
+                            console.log("default");
+                            break;
 
                      }
 
