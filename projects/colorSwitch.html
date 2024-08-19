@@ -9,19 +9,20 @@
         <link rel="stylesheet" href="">
     </head>
     <body style="background-color: black; color: white;">
-        <button onclick="myFunc()" ID="button_grey" style="background-color: grey;
+        <button onclick="colorSwitcher()" ID="button_grey" style="background-color: grey;
         padding: 30px 30px;"></button>
-        <button onclick="myFunc()" ID="button_white" style=" background-color: white; padding: 30px 30px;"></button>
-        <button onclick="myFunc()" ID="button_blue" style=" background-color: blue;padding: 30px 30px;"></button>
-        <button onclick="myFunc()" ID="button_yellow" style="background-color: yellow;padding: 30px 30px;"></button>
+        <button onclick="colorSwitcher()" ID="button_white" style=" background-color: white; padding: 30px 30px;"></button>
+        <button onclick="colorSwitcher()" ID="button_blue" style=" background-color: blue;padding: 30px 30px;"></button>
+        <button onclick="colorSwitcher()" ID="button_yellow" style="background-color: yellow;padding: 30px 30px;"></button>
         
         <script>
-            function myFunc(){
-                let allbutton=document.querySelectorAll("button")
+            function colorSwitcher(){
+                let allbutton=document.querySelectorAll("button");
+                let bodySelect=document.querySelector("body");
                 console.log(allbutton)
                 allbutton.forEach(btn => { //for loop beacuse each button's addeventListener is different and bound to that particualr button itself
-                    btn.addEventListener('click', function() {
-                    const buttonID=this.id
+                    btn.addEventListener('click', function(e) {
+                    const buttonID=e.target.id
                     console.log(buttonID)
                      switch(buttonID){
                         case "button_grey":
