@@ -26,14 +26,18 @@
             </p>
             <br><br>
             <h1>Guess a number</h1><br>
-            <input  id="userInput" type="number" placeholder="choose " min="1" max="100"></input><br><br><br><br>
+            <input  id="userInput" type="number" placeholder="choose " min="1" max="100"></input><br><br><br>
             <button onclick="guessTheNumber()" style="padding: 10px 5px;color: white;background-color: black;">Submit guess</button>
             <br><br><br>
+            <label style="padding:0px 80px;background-color: aliceblue; color: blueviolet;" id="determine"></label><br><br><br><br>
             <label>Previous guesses</label>
             <label id="prevGuess"></label><br>
+            
             <label>Guesses remaining: </label>
             <label id="remGuess"></label>
-        </div>
+            
+        </div><br><br>
+
         
         <script src="guessTheNumber.js" async defer></script>
     </body>
