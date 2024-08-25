@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+    
+</head>
+<body>
+    <h1>Set Interval start and stop code</h1><br>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <script>
+        let intervalID;
+        const colorChange=function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {// this loop will create the 6 letter color code using 0123456789ABCDEF, each time it'll randomly choose a number among 0123456789ABCDEF, suppose i=0 -> 9, then next i=1 0, i=2 -> E, like wise #90EFFF
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            console.log(color);
+            document.body.style.backgroundColor=color;
+            return color;
+        }
+
+        document.querySelector("#start").addEventListener('click',function(e){
+            intervalID=setInterval(colorChange,100)
+        })
+        document.getElementById("stop").addEventListener('click',function(e){
+            console.log("Stopped");      
+            clearInterval(intervalID)
+        })
+        
+    </script>
+
+</body>
+</html>

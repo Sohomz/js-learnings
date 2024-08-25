@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid white;
+        }
+    </style>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Press code</title>
+</head>
+<body style="background-color: #434343; color: bisque;">
+    <div id="insertOnKeyPress">
+
+    </div>
+
+
+    <script>
+        const captureDiv=document.querySelector("#insertOnKeyPress")
+        window.addEventListener('keydown',function(e){
+            console.log(e);
+            
+            captureDiv.innerHTML=`
+            <table>
+                <tr>
+                    <th>Pressed key</th>
+                    <th>Key Name</th>
+                    <th>Key code</th>
+                </tr>
+                <tr>
+                    <td>${e.key==" "? 'Space' : e.key }</td>
+                    <td>${e.code}</td>
+                    <td>${e.keyCode}</td>
+                </tr>
+            </table>
+            `
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+    
+</head>
+<body>
+    <h1>Set Interval start and stop code</h1><br>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <script>
+        let intervalID;
+        const callDate=function(){
+            console.log(Date.now())
+        }
+        
+        document.querySelector("#start").addEventListener('click',function(e){
+            intervalID=setInterval(callDate,2000)
+        })
+        document.getElementById("stop").addEventListener('click',function(e){
+            console.log("Stopped");      
+            clearInterval(intervalID)
+        })
+        
+    </script>
+
+</body>
+</html>
