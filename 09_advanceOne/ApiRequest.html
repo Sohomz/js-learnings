@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:white">
+    0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete.
+</body>
+
+<script>
+    const reqURL='https://api.github.com/users/sohomz'
+    const xhr= new XMLHttpRequest()
+    xhr.open('GET',reqURL)
+    console.log(xhr.readyState);// to know the state if 0,1,2,3,4
+    //Now to know/capture each and every readystate we can do this
+
+    xhr.onreadystatechange=(function(){//so everyTime state change happens, it will capture that
+        console.log(xhr.readyState);//1, but we will stop in between when state is 4
+
+        if(xhr.readyState==4){
+            const data = JSON.parse(this.responseText) // we need to use "this" keyword, responseText is vv. imp, also we need to parse it to JSON, else undefine will come in followers as it always resturns a string format
+            console.log(typeof data);
+            console.log("followers: ",data.followers);
+        }
+        
+    })
+    xhr.send()
+    
+</script>
+</html>
