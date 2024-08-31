@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            //requirement
+            document.querySelector('button').addEventListener('click', this.handleClick
+            .bind(this)) // if I am not giving bind, then handleClick will not have the access of server, and it will print undefined. To fix it, we need bind, bind will be telling that take ref of server also attached
+
+        }
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);
+        }
+    }
+
+    const app = new React()
+
+/*The issue arises because the this context inside the handleClick method is not bound to the instance of the React class when the button is clicked. Without using bind(), the this keyword inside handleClick refers to the button element that triggered the event, not the instance of the React class.
+
+Here’s a breakdown of what’s happening:
+
+Event Listener Context: When you add an event listener to the button, the this keyword inside the handleClick method refers to the button element itself, not the React instance.
+Undefined Property: Since the button element does not have a server property, this.server is undefined.
+To fix this, you need to bind the handleClick method to the instance of the React class. This ensures that this inside handleClick refers to the React instance, and you can access its properties.*/
+
+</script>
+</html>
+
