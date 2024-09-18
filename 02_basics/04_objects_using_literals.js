@@ -54,3 +54,72 @@ JsUser.greetings=function() {
 
 console.log(JsUser.greetings());
 console.log(JsUser.greetingsTwo());
+
+// Symbols in JavaScript are a powerful feature that provide unique and immutable identifiers for object properties. Here are the key concepts for using symbols:
+
+// 1. Uniqueness
+// Each symbol is unique, even if two symbols have the same description.
+// JavaScript
+
+// const sym1 = Symbol('description');
+// const sym2 = Symbol('description');
+// console.log(sym1 === sym2); // false
+// AI-generated code. Review and use carefully. More info on FAQ.
+// 2. Immutability
+// Symbols are immutable, meaning their value cannot be changed once created.
+// 3. Symbol as Property Keys
+// Symbols can be used as keys for object properties, ensuring that the property keys are unique and do not conflict with other keys.
+// JavaScript
+
+// const mySym = Symbol('myKey');
+// const obj = {
+//   [mySym]: 'value'
+// };
+// console.log(obj[mySym]); // 'value'
+// AI-generated code. Review and use carefully. More info on FAQ.
+// 4. Hidden Properties
+// Properties keyed by symbols do not appear in standard property enumerations like for...in, Object.keys(), or JSON.stringify().
+// JavaScript
+
+// const mySym = Symbol('myKey');
+// const obj = {
+//   [mySym]: 'value',
+//   normalKey: 'normalValue'
+// };
+// console.log(Object.keys(obj)); // ['normalKey']
+// console.log(JSON.stringify(obj)); // {"normalKey":"normalValue"}
+// AI-generated code. Review and use carefully. More info on FAQ.
+// 5. Retrieving Symbol Properties
+// You can retrieve symbol properties using Object.getOwnPropertySymbols() or Reflect.ownKeys().
+// JavaScript
+
+// const mySym = Symbol('myKey');
+// const obj = {
+//   [mySym]: 'value'
+// };
+// const symbols = Object.getOwnPropertySymbols(obj);
+// console.log(symbols); // [ Symbol(myKey) ]
+// console.log(obj[symbols[0]]); // 'value'
+// AI-generated code. Review and use carefully. More info on FAQ.
+// 6. Global Symbol Registry
+// Symbols can be registered globally using Symbol.for() and retrieved using Symbol.keyFor(). This allows for shared symbols across different parts of an application.
+// JavaScript
+
+// const globalSym = Symbol.for('globalKey');
+// const sameGlobalSym = Symbol.for('globalKey');
+// console.log(globalSym === sameGlobalSym); // true
+// console.log(Symbol.keyFor(globalSym)); // 'globalKey'
+// AI-generated code. Review and use carefully. More info on FAQ.
+// 7. Well-Known Symbols
+// JavaScript has several built-in symbols known as well-known symbols. These symbols represent internal language behaviors and can be used to customize object behavior.
+// JavaScript
+
+// class MyClass {
+//   Symbol.toStringTag {
+//     return 'MyClass';
+//   }
+// }
+// const instance = new MyClass();
+// console.log(instance.toString()); // '[object MyClass]'
+// AI-generated code. Review and use carefully. More info on FAQ.
+// Symbols are particularly useful in scenarios where you need to ensure that object properties are unique and do not conflict with other properties, especially in large codebases or when integrating with third-party libraries.
