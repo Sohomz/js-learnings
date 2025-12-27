@@ -1,5 +1,5 @@
 //there are many ways to declare an object
-const objUser=new Object()  //--> this is singleton object
+const objUser=new Object()  //--> this is singleton object, constructor
 //const objUser={} --> this is not singleton
 
 objUser.id="123abc"

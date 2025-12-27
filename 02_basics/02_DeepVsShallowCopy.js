@@ -7,11 +7,11 @@ let user1={
 }
 
 let user2=user1; //same ref as user1, not in "copy"
-user2.email='user23@gmail.com'; //changing value in user2, thatwill reflect in user1 also
+user2.email='user23@gmail.com'; //changing value in user2, that will reflect in user1 also
 
 console.log(user2); //{ email: 'user23@gmail.com', upi: 'user1@okbank' }
 
-//user1 will have reference in heap, now when I am defining user2=user1, then user2 also taking reference from heap where the user1 has its reference. So, here we are not accessing the "copy"data as we did in stack. So, now when we are chaning the values in user2, then user1 will also reflect.
+//user1 will have reference in heap, now when I am defining user2=user1, then user2 also taking reference from heap where the user1 has its reference. So, here we are not accessing the "copy" data as we did in stack. So, now when we are chaning the values in user2, then user1 will also reflect.
 
 
 // A deep copy of an object is a copy whose properties do not share the same references (point to the same underlying values) as those of the source object from which the copy was made. As a result, when you change either the source or the copy, you can be assured you're not causing the other object to change too. 

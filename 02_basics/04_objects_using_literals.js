@@ -64,7 +64,7 @@ console.log(JsUser.greetingsTwo());
 // const sym1 = Symbol('description');
 // const sym2 = Symbol('description');
 // console.log(sym1 === sym2); // false
-// AI-generated code. Review and use carefully. More info on FAQ.
+
 // 2. Immutability
 // Symbols are immutable, meaning their value cannot be changed once created.
 // 3. Symbol as Property Keys
@@ -76,7 +76,7 @@ console.log(JsUser.greetingsTwo());
 //   [mySym]: 'value'
 // };
 // console.log(obj[mySym]); // 'value'
-// AI-generated code. Review and use carefully. More info on FAQ.
+
 // 4. Hidden Properties
 // Properties keyed by symbols do not appear in standard property enumerations like for...in, Object.keys(), or JSON.stringify().
 // JavaScript
@@ -88,7 +88,7 @@ console.log(JsUser.greetingsTwo());
 // };
 // console.log(Object.keys(obj)); // ['normalKey']
 // console.log(JSON.stringify(obj)); // {"normalKey":"normalValue"}
-// AI-generated code. Review and use carefully. More info on FAQ.
+
 // 5. Retrieving Symbol Properties
 // You can retrieve symbol properties using Object.getOwnPropertySymbols() or Reflect.ownKeys().
 // JavaScript
@@ -121,5 +121,5 @@ console.log(JsUser.greetingsTwo());
 // }
 // const instance = new MyClass();
 // console.log(instance.toString()); // '[object MyClass]'
-// AI-generated code. Review and use carefully. More info on FAQ.
+
 // Symbols are particularly useful in scenarios where you need to ensure that object properties are unique and do not conflict with other properties, especially in large codebases or when integrating with third-party libraries.

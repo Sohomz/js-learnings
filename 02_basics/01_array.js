@@ -31,12 +31,15 @@ console.log(`Includes used to check if the value exists return boolean : ${arr1.
 
 //How to convert an Array to a String
 const myArr=new Array(4,3,2,4,57,99);
-const myArrString=myArr.join();
-
+const myArrString=myArr.join("-");
+//String to Array
+const myStringToArr=myArrString.split("-");
 console.log(`main array before changing the dataType of the array is :`)
 console.log(myArr)
 console.log(`using Join() we can convert an array to a String`);
 console.log(myArrString);
+console.log(`using Split() we can convert an String to an array`);
+console.log(myStringToArr);
 
 
 // slice, splice

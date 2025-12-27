@@ -38,9 +38,9 @@ console.log(real_another_array_1);
 //check if its an array
 console.log(Array.isArray("Sohom"));
 
-//Convert a String or anything to an array
+//Convert a String or anything to an array, not Number like 100, it'll return empty []
 console.log('Using Array.from');
-console.log(Array.from("Sohom"));
+console.log(Array.from("100"));
 
 console.log('\n');
 //Convert a String only to an array
