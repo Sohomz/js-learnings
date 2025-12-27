@@ -1,6 +1,9 @@
 //learning link: https://www.w3schools.com/js/js_string_methods.asp
 
 const myName="sohom";
+console.log(myName[0]);//s
+console.log(myName.toUpperCase());//SOHOM
+
 const repoCount=6;
 
 //old way

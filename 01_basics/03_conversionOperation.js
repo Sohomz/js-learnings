@@ -7,7 +7,7 @@ let score1=33
 let score2="33abc"
 let valueInNumber=Number(score2)
 //console.log(valueInNumber) //NaN
-//console.log(typeof valueInNumber) //number
+//console.log(typeof valueInNumber) //number because NaN is number
 
 
 let score3=null
